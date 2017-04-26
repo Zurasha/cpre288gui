@@ -1,0 +1,9 @@
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\bin\Debug\Robot GUI.exe.config
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\bin\Debug\Robot GUI.exe
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\bin\Debug\Robot GUI.pdb
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.csprojResolveAssemblyReference.cache
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot_GUI.Form1.resources
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot_GUI.Properties.Resources.resources
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.csproj.GenerateResource.Cache
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.exe
+c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.pdb
