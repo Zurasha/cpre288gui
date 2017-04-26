@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,21 +86,21 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "Chart";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea5.Name = "Chart";
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.Location = new System.Drawing.Point(16, 15);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "Chart";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series1.Name = "Big";
-            series1.YValuesPerPoint = 2;
-            series2.ChartArea = "Chart";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series2.Name = "Little";
-            series2.YValuesPerPoint = 2;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
+            series9.ChartArea = "Chart";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series9.Name = "Big";
+            series9.YValuesPerPoint = 2;
+            series10.ChartArea = "Chart";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series10.Name = "Little";
+            series10.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series9);
+            this.chart1.Series.Add(series10);
             this.chart1.Size = new System.Drawing.Size(424, 383);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -128,17 +129,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 409);
+            this.label1.Location = new System.Drawing.Point(100, 409);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(16, 405);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(68, 27);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Sweep";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 482);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -166,6 +178,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button7;
     }
 }
 
