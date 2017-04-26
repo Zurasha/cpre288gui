@@ -12,20 +12,6 @@ using System.Text;
 
 namespace Robot_GUI
 {
-    // Used https://msdn.microsoft.com/en-us/library/bew39x2a(v=vs.110).aspx to get sockets working
-    // State object for receiving data from remote device.  
-    public class StateObject
-    {
-        // Client socket.  
-        public Socket workSocket = null;
-        // Size of receive buffer.  
-        public const int BufferSize = 256;
-        // Receive buffer.  
-        public byte[] buffer = new byte[BufferSize];
-        // Received data string.  
-        public StringBuilder sb = new StringBuilder();
-    }
-
     public partial class Form1 : Form
     {
         private int degrees;
@@ -42,7 +28,7 @@ namespace Robot_GUI
             this.chart1.Series["Big"].Points.AddXY(40.5, 60.5);
             this.chart1.Series["Little"].Points.AddXY(20.5, 30.5);
 
-            StartClient();
+            AsynchronousClient.StartClient();
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -54,7 +40,6 @@ namespace Robot_GUI
         private void button1_Click(object sender, EventArgs e)
         {
             // this.chart1.Series["Big"].Points.Clear();
-            Send(startClient, "w\0");
         }
 
         // Backward
@@ -104,7 +89,25 @@ namespace Robot_GUI
         {
 
         }
+    }
 
+    // Used https://msdn.microsoft.com/en-us/library/bew39x2a(v=vs.110).aspx to get sockets working
+
+    // State object for receiving data from remote device.  
+    public class StateObject
+    {
+        // Client socket.  
+        public Socket workSocket = null;
+        // Size of receive buffer.  
+        public const int BufferSize = 256;
+        // Receive buffer.  
+        public byte[] buffer = new byte[BufferSize];
+        // Received data string.  
+        public StringBuilder sb = new StringBuilder();
+    }
+
+    public class AsynchronousClient
+    {
         // The port number for the remote device.  
         private const int port = 42880;
 
@@ -124,7 +127,7 @@ namespace Robot_GUI
             try
             {
                 // Establish the remote endpoint for the socket.
-                IPAddress ipAddress = new IPAddress(Encoding.ASCII.GetBytes("192.168.1.1"));
+                IPAddress ipAddress = new IPAddress(Encoding.ASCII.GetBytes("192.168.1.1")); 
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
 
                 // Create a TCP/IP socket.  
@@ -166,7 +169,7 @@ namespace Robot_GUI
                 // Complete the connection.  
                 client.EndConnect(ar);
 
-                Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
+                // Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
 
                 // Signal that the connection has been made.  
                 connectDone.Set();
