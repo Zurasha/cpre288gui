@@ -7,3 +7,12 @@ c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj
 c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.csproj.GenerateResource.Cache
 c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.exe
 c:\users\bryce_000\documents\visual studio 2015\Projects\Robot GUI\Robot GUI\obj\Debug\Robot GUI.pdb
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\bin\Debug\Robot GUI.exe.config
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.exe
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.pdb
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\bin\Debug\Robot GUI.exe
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\bin\Debug\Robot GUI.pdb
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.csprojResolveAssemblyReference.cache
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Form1.resources
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Properties.Resources.resources
+C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.csproj.GenerateResource.Cache

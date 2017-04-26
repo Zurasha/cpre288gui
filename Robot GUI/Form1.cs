@@ -12,9 +12,19 @@ namespace Robot_GUI
 {
     public partial class Form1 : Form
     {
+        private int degrees;
+
         public Form1()
         {
             InitializeComponent();
+            this.degrees = 90;
+            this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
+            this.chart1.ChartAreas["Chart"].AxisX.Maximum = 160;
+            this.chart1.ChartAreas["Chart"].AxisX.Minimum = 0;
+            this.chart1.ChartAreas["Chart"].AxisY.Maximum = 80;
+            this.chart1.ChartAreas["Chart"].AxisY.Minimum = 0;
+            this.chart1.Series["Big"].Points.AddXY(40.5, 60.5);
+            this.chart1.Series["Little"].Points.AddXY(20.5, 30.5);
         }
 
         private void chart1_Click(object sender, EventArgs e)
@@ -24,7 +34,7 @@ namespace Robot_GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // this.chart1.Series["Big"].Points.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +50,28 @@ namespace Robot_GUI
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.degrees += 15;
+            if (this.degrees > 180)
+            {
+                this.degrees = 180;
+            }
+            this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
+            this.label1.Update();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.degrees += -15;
+            if (this.degrees < 0)
+            {
+                this.degrees = 0;
+            }
+            this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
+            this.label1.Update();
         }
     }
 }
