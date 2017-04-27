@@ -27,6 +27,7 @@ namespace Robot_GUI
             this.degrees = 90;
             this.distance = 60;
             this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
+            this.label2.Text = "Distance to Move: " + this.distance.ToString();
             this.chart1.ChartAreas["Chart"].AxisX.Maximum = 160;
             this.chart1.ChartAreas["Chart"].AxisX.Minimum = 0;
             this.chart1.ChartAreas["Chart"].AxisY.Maximum = 80;
@@ -62,18 +63,27 @@ namespace Robot_GUI
         private void button2_Click(object sender, EventArgs e)
         {
             sendCommand("s");
+
+            this.label3.Text = recieveData();
+            this.label3.Update();
         }
 
         // Left
         private void button3_Click(object sender, EventArgs e)
         {
             sendCommand("a");
+
+            this.label3.Text = recieveData();
+            this.label3.Update();
         }
 
         // Right
         private void button4_Click(object sender, EventArgs e)
         {
             sendCommand("d");
+
+            this.label3.Text = recieveData();
+            this.label3.Update();
         }
 
         // distance up-i down-k degree up-l down-j
@@ -110,6 +120,32 @@ namespace Robot_GUI
             this.chart1.Series["Big"].Points.Clear();
             this.chart1.Series["Small"].Points.Clear();
             sendCommand(" ");
+
+            String[] values = recieveData().Split(' ');
+            int i;
+            String[] coord;
+            double x = 0.0, y = 0.0;
+
+            for(i = 0; i < values.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    coord = values[i].Split(',');
+                    x = Convert.ToDouble(coord[0]);
+                    y = Convert.ToDouble(coord[1]);
+                }
+                else
+                {
+                    if (values[i] == "B")
+                    {
+                        this.chart1.Series["Big"].Points.AddXY(x, y);
+                    }
+                    else
+                    {
+                        this.chart1.Series["Small"].Points.AddXY(x, y);
+                    }
+                }
+            }
         }
 
         // Distance +10 start 60
