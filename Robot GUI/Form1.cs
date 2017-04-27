@@ -25,6 +25,7 @@ namespace Robot_GUI
         {
             InitializeComponent();
             this.degrees = 90;
+            this.distance = 60;
             this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
             this.chart1.ChartAreas["Chart"].AxisX.Maximum = 160;
             this.chart1.ChartAreas["Chart"].AxisX.Minimum = 0;
@@ -105,13 +106,35 @@ namespace Robot_GUI
         // Detect Surroundings
         private void button7_Click(object sender, EventArgs e)
         {
-
+            sendCommand(" ");
         }
 
         private void sendCommand(String command)
         {
             message = Encoding.ASCII.GetBytes(command);
             stream.Write(message, 0, message.Length);
+        }
+
+        // Distance +10 start 60
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.distance += 10;
+            this.label2.Text = "Distance to Move: " + this.distance.ToString();
+            this.label2.Update();
+            sendCommand("i");
+        }
+
+        // Distance -10
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.distance += -10;
+            if (this.distance < 0)
+            {
+                this.distance = 0;
+            }
+            this.label2.Text = "Distance to Move: " + this.distance.ToString();
+            this.label2.Update();
+            sendCommand("k");
         }
     }
 }
