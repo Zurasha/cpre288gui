@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -89,21 +89,21 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "Chart";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "Chart";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Location = new System.Drawing.Point(16, 15);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "Chart";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series1.Name = "Big";
-            series1.YValuesPerPoint = 2;
-            series2.ChartArea = "Chart";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series2.Name = "Little";
-            series2.YValuesPerPoint = 2;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
+            series3.ChartArea = "Chart";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series3.Name = "Big";
+            series3.YValuesPerPoint = 2;
+            series4.ChartArea = "Chart";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series4.Name = "Little";
+            series4.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(424, 383);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -154,7 +154,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(99, 25);
             this.button8.TabIndex = 9;
-            this.button8.Text = "button8";
+            this.button8.Text = "Distance +10";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -164,7 +164,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 25);
             this.button9.TabIndex = 10;
-            this.button9.Text = "button9";
+            this.button9.Text = "Distance -10";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
