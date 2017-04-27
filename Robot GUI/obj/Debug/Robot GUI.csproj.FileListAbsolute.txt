@@ -16,3 +16,12 @@ C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.cspro
 C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Form1.resources
 C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Properties.Resources.resources
 C:\Users\Zurasha\Desktop\RobotGUI\cpre288gui\Robot GUI\obj\Debug\Robot GUI.csproj.GenerateResource.Cache
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Debug\Robot GUI.exe.config
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot GUI.exe
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot GUI.pdb
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Debug\Robot GUI.exe
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Debug\Robot GUI.pdb
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot GUI.csprojResolveAssemblyReference.cache
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Form1.resources
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot_GUI.Properties.Resources.resources
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Debug\Robot GUI.csproj.GenerateResource.Cache

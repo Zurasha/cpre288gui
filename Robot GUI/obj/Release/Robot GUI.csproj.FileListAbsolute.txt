@@ -1,0 +1,8 @@
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Release\Robot GUI.exe.config
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Release\Robot GUI.exe
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\bin\Release\Robot GUI.pdb
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Release\Robot_GUI.Form1.resources
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Release\Robot_GUI.Properties.Resources.resources
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Release\Robot GUI.csproj.GenerateResource.Cache
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Release\Robot GUI.exe
+\\my.files.iastate.edu\Users\phippen\Desktop\GitHub\cpre288gui\Robot GUI\obj\Release\Robot GUI.pdb
