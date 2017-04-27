@@ -118,7 +118,7 @@ namespace Robot_GUI
         private void button7_Click(object sender, EventArgs e)
         {
             this.chart1.Series["Big"].Points.Clear();
-            this.chart1.Series["Small"].Points.Clear();
+            this.chart1.Series["Little"].Points.Clear();
             sendCommand(" ");
 
             String[] values = recieveData().Split(' ');
@@ -142,7 +142,7 @@ namespace Robot_GUI
                     }
                     else
                     {
-                        this.chart1.Series["Small"].Points.AddXY(x, y);
+                        this.chart1.Series["Little"].Points.AddXY(x, y);
                     }
                 }
             }
