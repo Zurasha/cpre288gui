@@ -31,7 +31,7 @@ namespace Robot_GUI
             this.chart1.ChartAreas["Chart"].AxisX.Minimum = 0;
             this.chart1.ChartAreas["Chart"].AxisY.Maximum = 80;
             this.chart1.ChartAreas["Chart"].AxisY.Minimum = 0;
-            //this.chart1.Series["Little"].Points.AddXY(20.5, 30.5);
+            this.chart1.Series["Player"].Points.AddXY(80.0, 0.0);
 
             try
             {
@@ -144,6 +144,11 @@ namespace Robot_GUI
         {
             int length = stream.Read(message, 0, message.Length);
             return Encoding.ASCII.GetString(message, 0, length);
+        }
+
+        private void adjustPositions()
+        {
+
         }
     }
 }
