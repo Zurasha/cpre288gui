@@ -131,7 +131,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 25);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Add 15";
+            this.button5.Text = "Deg. +15";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -141,7 +141,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 25);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Sub 15";
+            this.button6.Text = "Deg. -15";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -170,7 +170,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(99, 25);
             this.button8.TabIndex = 9;
-            this.button8.Text = "Distance +10";
+            this.button8.Text = "Dist. +10";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -180,14 +180,14 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 25);
             this.button9.TabIndex = 10;
-            this.button9.Text = "Distance -10";
+            this.button9.Text = "Dist. -10";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(399, 626);
+            this.label2.Location = new System.Drawing.Point(372, 626);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 11;
@@ -196,7 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(838, 657);
+            this.label3.Location = new System.Drawing.Point(796, 671);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 12;

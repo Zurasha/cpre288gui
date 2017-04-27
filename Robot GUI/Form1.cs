@@ -52,7 +52,6 @@ namespace Robot_GUI
         // Forward
         private void button1_Click(object sender, EventArgs e)
         {
-            // this.chart1.Series["Big"].Points.Clear();
             sendCommand("w");
 
             String response = recieveData();
@@ -109,6 +108,8 @@ namespace Robot_GUI
         // Detect Surroundings
         private void button7_Click(object sender, EventArgs e)
         {
+            this.chart1.Series["Big"].Points.Clear();
+            this.chart1.Series["Small"].Points.Clear();
             sendCommand(" ");
         }
 
@@ -136,14 +137,28 @@ namespace Robot_GUI
 
         private void sendCommand(String command)
         {
-            message = Encoding.ASCII.GetBytes(command);
-            stream.Write(message, 0, message.Length);
+            try
+            {
+                message = Encoding.ASCII.GetBytes(command);
+                stream.Write(message, 0, message.Length);
+            }
+            catch (Exception e)
+            {
+                Console.Write("Exception " + e);
+            }
         }
 
         private string recieveData()
         {
-            int length = stream.Read(message, 0, message.Length);
-            return Encoding.ASCII.GetString(message, 0, length);
+            try
+            {
+                int length = stream.Read(message, 0, message.Length);
+                return Encoding.ASCII.GetString(message, 0, length);
+            }
+            catch (Exception e)
+            {
+                return "Exception " + e.ToString();
+            }
         }
 
         private void adjustPositions()
