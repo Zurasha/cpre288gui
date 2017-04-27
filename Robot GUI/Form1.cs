@@ -86,6 +86,7 @@ namespace Robot_GUI
             }
             this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
             this.label1.Update();
+            sendCommand("l");
         }
 
         // - 15 degrees
@@ -98,6 +99,7 @@ namespace Robot_GUI
             }
             this.label1.Text = "Turn Degrees: " + this.degrees.ToString();
             this.label1.Update();
+            sendCommand("j");
         }
 
         // Detect Surroundings
