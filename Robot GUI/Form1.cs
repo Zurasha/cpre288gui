@@ -31,8 +31,7 @@ namespace Robot_GUI
             this.chart1.ChartAreas["Chart"].AxisX.Minimum = 0;
             this.chart1.ChartAreas["Chart"].AxisY.Maximum = 80;
             this.chart1.ChartAreas["Chart"].AxisY.Minimum = 0;
-            this.chart1.Series["Big"].Points.AddXY(40.5, 60.5);
-            this.chart1.Series["Little"].Points.AddXY(20.5, 30.5);
+            //this.chart1.Series["Little"].Points.AddXY(20.5, 30.5);
 
             try
             {
@@ -55,6 +54,10 @@ namespace Robot_GUI
         {
             // this.chart1.Series["Big"].Points.Clear();
             sendCommand("w");
+
+            String response = recieveData();
+            this.label3.Text = response;
+            this.label3.Update();
         }
 
         // Backward
@@ -109,12 +112,6 @@ namespace Robot_GUI
             sendCommand(" ");
         }
 
-        private void sendCommand(String command)
-        {
-            message = Encoding.ASCII.GetBytes(command);
-            stream.Write(message, 0, message.Length);
-        }
-
         // Distance +10 start 60
         private void button8_Click(object sender, EventArgs e)
         {
@@ -135,6 +132,18 @@ namespace Robot_GUI
             this.label2.Text = "Distance to Move: " + this.distance.ToString();
             this.label2.Update();
             sendCommand("k");
+        }
+
+        private void sendCommand(String command)
+        {
+            message = Encoding.ASCII.GetBytes(command);
+            stream.Write(message, 0, message.Length);
+        }
+
+        private string recieveData()
+        {
+            int length = stream.Read(message, 0, message.Length);
+            return Encoding.ASCII.GetString(message, 0, length);
         }
     }
 }
