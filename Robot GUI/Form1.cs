@@ -54,8 +54,7 @@ namespace Robot_GUI
         {
             sendCommand("w");
 
-            String response = recieveData();
-            this.label3.Text = response;
+            this.label3.Text = recieveData();
             this.label3.Update();
         }
 
@@ -152,8 +151,23 @@ namespace Robot_GUI
         {
             try
             {
-                int length = stream.Read(message, 0, message.Length);
-                return Encoding.ASCII.GetString(message, 0, length);
+                //int length = stream.Read(message, 0, message.Length);
+                //return Encoding.ASCII.GetString(message, 0, length);
+                byte[] myReadBuffer = new byte[1024];
+                StringBuilder myCompleteMessage = new StringBuilder();
+                int numberOfBytesRead = 0;
+
+                // Incoming message may be larger than the buffer size.
+                do
+                {
+                    numberOfBytesRead = stream.Read(myReadBuffer, 0, myReadBuffer.Length);
+
+                    myCompleteMessage.AppendFormat("{0}", Encoding.ASCII.GetString(myReadBuffer, 0, numberOfBytesRead));
+
+                }
+                while (stream.DataAvailable);
+
+                return myCompleteMessage.ToString();
             }
             catch (Exception e)
             {
