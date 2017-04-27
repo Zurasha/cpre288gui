@@ -16,6 +16,7 @@ namespace Robot_GUI
     public partial class Form1 : Form
     {
         private TcpClient client;
+        private Stream stream;
         private int degrees;
 
         public Form1()
@@ -35,15 +36,11 @@ namespace Robot_GUI
                 client = new TcpClient();
 
                 client.Connect("192.168.1.1", 42880);
-                Stream stream = client.GetStream();
-
-                byte[] message = Encoding.ASCII.GetBytes("w");
-
-                stream.Write(message, 0, message.Length);
+                stream = client.GetStream();
             }
             catch (Exception e)
             {
-                Console.Write("Failed");
+                Console.Write("Failed" + e);
             }
         }
 
@@ -56,24 +53,61 @@ namespace Robot_GUI
         private void button1_Click(object sender, EventArgs e)
         {
             // this.chart1.Series["Big"].Points.Clear();
+            try
+            {
+                byte[] message = Encoding.ASCII.GetBytes("w");
+
+                stream.Write(message, 0, message.Length);
+            }
+            catch (Exception e1)
+            {
+                Console.Write("Failed" + e1);
+            }
         }
 
         // Backward
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                byte[] message = Encoding.ASCII.GetBytes("s");
 
+                stream.Write(message, 0, message.Length);
+            }
+            catch (Exception e2)
+            {
+                Console.Write("Failed" + e2);
+            }
         }
 
         // Left
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                byte[] message = Encoding.ASCII.GetBytes("a");
 
+                stream.Write(message, 0, message.Length);
+            }
+            catch (Exception e3)
+            {
+                Console.Write("Failed" + e3);
+            }
         }
 
         // Right
         private void button4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                byte[] message = Encoding.ASCII.GetBytes("d");
 
+                stream.Write(message, 0, message.Length);
+            }
+            catch (Exception e4)
+            {
+                Console.Write("Failed" + e4);
+            }
         }
 
         // + 15 degrees
