@@ -16,7 +16,7 @@ namespace Robot_GUI
     public partial class Form1 : Form
     {
         private static TcpClient client;
-        private static Stream stream;
+        private static NetworkStream stream;
         private static byte[] message;
         private int degrees;
 
